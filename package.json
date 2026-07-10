@@ -1,0 +1,50 @@
+{
+  "name": "pi-lint-on-edit",
+  "version": "0.1.0",
+  "description": "LSP diagnostics after file write/edit for pi — with proper daemon lifecycle management",
+  "author": "buihongduc132",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buihongduc132/pi-lint-on-edit.git"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "pi-coding-agent",
+    "lsp",
+    "diagnostics",
+    "lint"
+  ],
+  "files": [
+    "extensions/**/*.ts",
+    "implementations/**/*.ts",
+    "!extensions/**/*.test.ts",
+    "!implementations/**/*.test.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check": "npm run typecheck && npm run test"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.0",
+    "@vitest/coverage-v8": "^4.1.0",
+    "typescript": "^5.8.0"
+  }
+}
