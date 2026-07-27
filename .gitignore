@@ -5,3 +5,9 @@ coverage/
 dist/
 *.backup.*
 *.bak
+.worktrees/
+
+# Override global gitignore `lib/` rule so extension lib files (incl. tests) are tracked.
+# The user's ~/.gitignore_global ignores any `lib/` path, which would silently drop
+# extensions/lib/*.ts and extensions/lib/*.test.ts from commits.
+!extensions/lib/
