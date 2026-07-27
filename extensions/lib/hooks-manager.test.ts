@@ -4,7 +4,6 @@
  * Uses real temp dirs (node:fs is NOT mocked) so file IO branches are
  * genuinely exercised.
  */
-// @ts-nocheck
 
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import fs from "node:fs";

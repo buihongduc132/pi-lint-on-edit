@@ -4,7 +4,6 @@
  * Uses real temp files (node:fs is NOT mocked) so rotation is genuinely
  * exercised.
  */
-// @ts-nocheck
 
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import fs from "node:fs";
@@ -18,8 +17,6 @@ import { createPluginLogger } from "./plugin-logger.ts";
 function tmpDir(): string {
 	return fs.mkdtempSync(path.join(os.tmpdir(), "pi-logger-"));
 }
-
-const created: string[] = [];
 
 function readFile(p: string): string {
 	if (!fs.existsSync(p)) return "";
@@ -38,7 +35,6 @@ describe("plugin-logger", () => {
 
 	beforeEach(() => {
 		dir = tmpDir();
-		created.push(dir);
 	});
 
 	afterEach(() => {
