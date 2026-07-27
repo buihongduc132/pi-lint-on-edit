@@ -1,7 +1,6 @@
 /**
  * pi-hooks-manager — Type definitions
  */
-// @ts-nocheck
 
 // 
 

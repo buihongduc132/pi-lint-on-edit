@@ -6,7 +6,6 @@
  * - Hook registry (registerHook / isEnabled / getRegistry)
  * - Toggle operations (addDisabled / removeDisabled)
  */
-// @ts-nocheck
 
 // 
 
@@ -15,7 +14,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import type { HookOrigin, HookRegistration, HookSource, HookState, Scope, StatePaths } from "./types";
+import type { HookOrigin, HookRegistration, HookSource, HookState, Scope, StatePaths } from "./types.js";
 
 const STATE_FILE = "hooks-state.json";
 
